@@ -43,5 +43,5 @@ document.getElementById("WithDrow").addEventListener('click',function(){
     withwrowInpute.value=" ";
 })
 document.getElementById("log out").addEventListener('click',function(){
-    window.location="index.html";
+    window.location="https://shaharia1999.github.io/bank-system/";
 })
