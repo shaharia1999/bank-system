@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>babar bank</title>
+</head>
+<body>
+    <header>
+        <h1  class="text-4xl text-center mt-5">Wellcome to <span class="text-danger">Baper Bank</span>!!</h1>
+    </header>
+    <main>
+         <section class="container mt-5">
+             <div class="row row-cols-3 gx-3">
+                 <div class="col">
+                     <div class="bg-primary p-5 text-center">
+                      <h1>Deposit</h1>
+                      <h1>$ <span id="depoTaka">000</span></h1>
+                    </div>
+                  </div>
+                 <div class="col">
+                     <div class="bg-secondary p-5 text-center">
+                      <h1>WithDrow</h1>
+                      <h1>$ <span> 000</span></h1>
+                    </div>
+                  </div>
+                 <div class="col">
+                     <div class="bg-success p-5 text-center">
+                      <h1>Balance</h1>
+                      <h1>$ <span id="total"> 12000</span></h1>
+                    </div>
+                  </div>
+
+             </div>
+         </section>
+         <section class=" container mt-5">
+            <div class="row row-cols-2 gx-3">
+                <div class="col">
+                    <div class=" text-center bg-dark p-5">
+                     <input id="dTaka" class="px-3 mb-2" type="text">
+                     <br>
+                      <button id="diposit" class="px-4 rounded-pill bg-success border-0 ">deposit</button>
+                   </div>
+                 </div>
+                <div class="col">
+                    <div  class=" text-center  bg-primary p-5">
+                     <input id="withwrowInpute" class="px-3 mb-2" type="text">
+                     <br>
+                      <button id="WithDrow" class="px-4 rounded-pill bg-danger border-0 ">WithDrow</button>
+                   </div>
+                 </div>
+
+            
+
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="javascript/calculation.js">
+    </script>
+</body>
+</html>
