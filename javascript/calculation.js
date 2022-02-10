@@ -19,9 +19,16 @@ document.getElementById("diposit").addEventListener('click',function(){
 
 })
 document.getElementById("WithDrow").addEventListener('click',function(){
+
+
       const withwrowInpute= document.getElementById("withwrowInpute");
     //   convert the value string to number
       const withwrowInputeValue=parseFloat(withwrowInpute.value);
+         const showwithdrow=document.getElementById("showWithdrow");
+         const showwithdrowValue=parseFloat(showwithdrow.innerText);
+          const showwithdrowtotal=showwithdrowValue+withwrowInputeValue;
+          showwithdrow.innerText=showwithdrowtotal;
+
       const totalbalance= document.getElementById('total');
     //   convert the string to number
       const totalbalanceValue=parseFloat(totalbalance.innerText);
@@ -34,4 +41,7 @@ document.getElementById("WithDrow").addEventListener('click',function(){
 
     // clear the input
     withwrowInpute.value=" ";
+})
+document.getElementById("log out").addEventListener('click',function(){
+    window.location="index.html";
 })
