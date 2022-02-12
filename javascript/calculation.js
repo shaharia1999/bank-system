@@ -1,47 +1,70 @@
+// terget the input
+
+function inputValue(input){
+    const clintInput= document.getElementById(input);
+    const clintInputVlue= parseFloat(clintInput.value);
+    clintInput.value=" ";
+    return clintInputVlue;
+}
+
+//terget the innerTextBox
+function ubdateDepositAanWithdrow(balance){
+  let praveBalance= document.getElementById(balance);
+  let praveBalanceValue=parseFloat(praveBalance.innerText);
+  return praveBalanceValue;
+
+
+}
+//// terget the total balance InnerText
+function total(){
+  const stingBalance=document.getElementById("total");
+  const prevbalance= parseFloat(stingBalance.innerText);
+  return prevbalance;
+  
+}
+
+
+
+//////////////////////////////////// deposit add event Lisener
+
 document.getElementById("diposit").addEventListener('click',function(){
-    // terger element
-    let depoInput= document.getElementById("dTaka");
-        depoamout=parseFloat(depoInput.value);
-    //  depoInput=depoInput.value;
-     let newdipo= document.getElementById("depoTaka");
-     let curreentDipo=parseFloat(newdipo.innerText);
-       let ubdatedipo=  parseFloat(curreentDipo+depoamout);
 
-        newdipo.innerText=ubdatedipo;
+  //// deposit amout
+    const enterInput=inputValue('dTaka');
+    const balanceIncrese=ubdateDepositAanWithdrow("depoTaka");
+    const UbdateBalace=  parseFloat(enterInput+balanceIncrese);
+    let praveBalance= document.getElementById("depoTaka");
+     let ubdatepraveDiposit=praveBalance.innerText=UbdateBalace;
 
-       //clear input
-      depoInput.value=" ";
+  ///// after deposit total
+  const increaseBalance=total('total');
+  const latestTotal=increaseBalance+ubdatepraveDiposit;
+  const totalmYbalance=document.getElementById("total");
+  totalmYbalance.innerText=latestTotal;
 
-       const stingBalance=document.getElementById("total");
-       const prevbalance= parseFloat(stingBalance.innerText);
-       const ubdatebalance=prevbalance+depoamout;
-       stingBalance.innerText=ubdatebalance;
 
 })
+
+
+
+
+///// /////////////////////////WithDrow add event liseler
+
 document.getElementById("WithDrow").addEventListener('click',function(){
 
+/// with drow amout 
+  const enterInput=inputValue('withwrowInpute');
+  const balanceIncrese=ubdateDepositAanWithdrow("showWithdrow");
+  const UbdateBalace=  parseFloat(enterInput+balanceIncrese);
+  let praveBalance= document.getElementById("showWithdrow");
+  let ubdatepraveWithdrow=praveBalance.innerText=UbdateBalace;
 
-      const withwrowInpute= document.getElementById("withwrowInpute");
-    //   convert the value string to number
-      const withwrowInputeValue=parseFloat(withwrowInpute.value);
-         const showwithdrow=document.getElementById("showWithdrow");
-         const showwithdrowValue=parseFloat(showwithdrow.innerText);
-          const showwithdrowtotal=showwithdrowValue+withwrowInputeValue;
-          showwithdrow.innerText=showwithdrowtotal;
-
-      const totalbalance= document.getElementById('total');
-    //   convert the string to number
-      const totalbalanceValue=parseFloat(totalbalance.innerText);
-  
-    //   calculation
-    const withDroaAfterTotal=totalbalanceValue-withwrowInputeValue;
-    // set inner text
-    totalbalance.innerText=withDroaAfterTotal;
-    
-
-    // clear the input
-    withwrowInpute.value=" ";
+//// after withdrow totaal
+    const increaseBalance=total('total');
+    const latestTotal=increaseBalance-ubdatepraveWithdrow;
+    const totalmYbalance=document.getElementById("total");
+    totalmYbalance.innerText=latestTotal;
 })
 document.getElementById("log out").addEventListener('click',function(){
     window.location="https://shaharia1999.github.io/bank-system/";
-})
+});
